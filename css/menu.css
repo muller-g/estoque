@@ -1,0 +1,17 @@
+.left-menu{
+    width: 10%;
+    background-color: tomato;
+    display: grid;
+    text-align: center;
+    align-items: center;
+}
+
+.left-menu a{
+    color: white;
+    font-size: 20px;
+    padding: 20% 10%;
+}
+
+.left-menu a:hover{
+    background-color: rgb(255, 152, 133);
+}
