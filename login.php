@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="container">
-        <form action="home.php" method="get">
+        <form action="backend/loginValidate.php" method="get">
             <div class="form-input-up">
                 <legend>Usuário: </legend>
                 <input type="text" name="username" id="username" class="input-login">

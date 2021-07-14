@@ -9,11 +9,19 @@
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="css/modal.css">
     <title>Início</title>
+    <?php
+    session_start();
+    if(!isset ($_SESSION['usuario_apelido']) == true){
+        unset($_SESSION['usuario_apelido']);
+        header('location:login.php');
+    }
+    $logado = $_SESSION['usuario_apelido'];
+    ?>
 </head>
 <body>
     <div class="left-menu">
         <a href="home.php">Inicio</a>
-        <a href="login.php">Sair</a>
+        <a href="backend/logout.php">Sair</a>
     </div>
     <div class="main">
         <div class="main-title">

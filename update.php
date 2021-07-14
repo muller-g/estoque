@@ -10,6 +10,14 @@
     <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="css/main-update.css">
     <title>Atualizar Item</title>
+    <?php
+    session_start();
+    if(!isset ($_SESSION['usuario_apelido']) == true){
+        unset($_SESSION['usuario_apelido']);
+        header('location:login.php');
+    }
+    $logado = $_SESSION['usuario_apelido'];
+    ?>
 </head>
 <body>
     <div class="left-menu">
@@ -22,7 +30,6 @@
                 <form action="backend/editItem.php" method="get">
                     <?php  
                     require_once("backend/conexao.php"); 
-                    
                     $id = $_GET["id"];
                     
                     $stmt = $conn->query("SELECT * FROM item WHERE id = $id");
